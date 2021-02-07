@@ -1,3 +1,5 @@
+package java_básico_exerc;
+
 public class Exercicios {
     public static void main(String[] args) {
 
