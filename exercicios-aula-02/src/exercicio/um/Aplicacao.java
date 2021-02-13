@@ -14,7 +14,6 @@ public class Aplicacao {
         troia.reproduzir();
         regresso.reproduzir();
 
-
         Ator angelinaJolie = new Ator("Angelina Jolie", 45, 2, Genero.FEMININO);
         Ator scarlettJohansson = new Ator("Scarlett Johansson",36, 1, Genero.FEMININO);
 
@@ -22,7 +21,6 @@ public class Aplicacao {
         regresso.getDiretor().apressentar();
         angelinaJolie.apressentar();
         scarlettJohansson.apressentar();
-
 
     }
 
