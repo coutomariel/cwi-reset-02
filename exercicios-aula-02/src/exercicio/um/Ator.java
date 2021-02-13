@@ -1,10 +1,10 @@
 package exercicio.um;
 
-public class Diretor {
+public class Ator {
 
     private String nome;
     private Integer idade;
-    private Integer quantidadeFilmesDirigidos;
+    private Integer numeroOscars;
     private Genero genero;
 
     public void apressentar(){
@@ -13,10 +13,10 @@ public class Diretor {
         System.out.println("Nome: " + this.genero.getDescricao() + "\n");
     }
 
-    public Diretor(String nome, Integer idade, Integer quantidadeFilmesDirigidos, Genero genero) {
+    public Ator(String nome, Integer idade, Integer numeroOscars, Genero genero) {
         this.nome = nome;
         this.idade = idade;
-        this.quantidadeFilmesDirigidos = quantidadeFilmesDirigidos;
+        this.numeroOscars = numeroOscars;
         this.genero = genero;
     }
 
@@ -36,27 +36,19 @@ public class Diretor {
         this.idade = idade;
     }
 
-    public Integer getQuantidadeFilmesDirigidos() {
-        return quantidadeFilmesDirigidos;
+    public Integer getNumeroOscars() {
+        return numeroOscars;
     }
 
-    public void setQuantidadeFilmesDirigidos(Integer quantidadeFilmesDirigidos) {
-        this.quantidadeFilmesDirigidos = quantidadeFilmesDirigidos;
+    public void setNumeroOscars(Integer numeroOscars) {
+        this.numeroOscars = numeroOscars;
     }
+
     public Genero getGenero() {
         return genero;
     }
+
     public void setGenero(Genero genero) {
         this.genero = genero;
-    }
-
-    @Override
-    public String toString() {
-        return "Diretor{" +
-                "nome='" + nome + '\'' +
-                ", idade=" + idade +
-                ", quantidadeFilmesDirigidos=" + quantidadeFilmesDirigidos +
-                ", genero=" + genero +
-                '}';
     }
 }

@@ -13,7 +13,7 @@ public class Filme {
 
     public void reproduzir(){
         System.out.println("-Nome: " + this.nome + " -Descrição: " + this.descricao + " -Duração: " + this.duracao
-                + " -Dirigido por: " + this.diretor.getNome());
+                + " -Dirigido por: " + this.diretor.getNome() + "\n") ;
     }
 
     public Filme(String nome, String descricao, Integer duracao, Integer anoLancamento, Integer avaliacao, Diretor diretor) {
