@@ -17,12 +17,27 @@ public class Filme {
     }
 
     public Filme(String nome, String descricao, Integer duracao, Integer anoLancamento, Integer avaliacao, Diretor diretor) {
+        validaAvaliacao(avaliacao);
+        validaDescricao(avaliacao);
         this.nome = nome;
         this.descricao = descricao;
         this.duracao = duracao;
         this.anoLancamento = anoLancamento;
-        this.avaliacao = avaliacao;
         this.diretor = diretor;
+    }
+
+    private void validaDescricao(Integer avaliacao) {
+        if("Batman vs Superman".equals(this.descricao)){
+            this.avaliacao = 1;
+        } else if("O Clube da Luta".equals(descricao)){
+            this.avaliacao = 5;
+        }
+    }
+
+    private void validaAvaliacao(Integer avaliacao) {
+        if(avaliacao > 5 || avaliacao < 0){
+            this.avaliacao = avaliacao;
+        }
     }
 
     public String getNome() {
