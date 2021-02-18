@@ -1,3 +1,5 @@
+import model.*;
+
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Random;
@@ -18,6 +20,24 @@ public class MinhaCasaMinhaDesgraca {
          *
          * NÃO MODIFICAR ESTA CLASSE ANTES DESTA LINHA.
          */
+
+
+        Endereco enderecoAptoRJ = new Endereco("AV. Brasil", 322, "apto", "Vila Flores",
+                "Duque de Caxias", UnidadeFederativa.RIO_DE_JANEIRO);
+        Imovel aptoRJ = new Apartamento(enderecoAptoRJ, 185000.00, "5");
+        opcoesParaFinanciamento.registrarImovel(aptoRJ);
+
+
+        Endereco enderecoCasaSP = new Endereco("Rua dos imigrantes", 1515, "sobrado", "Bandeirantes",
+                "Sorocaba", UnidadeFederativa.SAO_PAULO);
+        Imovel casaSP = new Casa(enderecoCasaSP, 155000.00, false);
+        opcoesParaFinanciamento.registrarImovel(casaSP);
+
+
+        Endereco enderecoCasaAC = new Endereco("Rua Tulipas", 3020, "comp", "Tupinambas",
+                "Rio Branco", UnidadeFederativa.ACRE);
+        Imovel casaAcre = new Casa(enderecoCasaAC, 85000.00, true);
+        opcoesParaFinanciamento.registrarImovel(casaAcre);
 
         /**
          * FIM

@@ -1,3 +1,5 @@
+import model.Imovel;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,10 +19,20 @@ public class ImoveisParaFinanciamento {
      *   (substituindo XXX pelo valor do imóvel):
      *      " > Atenção, problema de registro! Imóveis com valor R$ XXX não são aceitos no programa."
      */
+    private final double VALOR_MINIMO = 50000.00;
+    private final double VALOR_MAXIMO = 1000000.00;
+
     public void registrarImovel(Imovel imovel) {
 
         // se "imovel" corresponder às regras, adicioná-lo à lista "imoveis" com o seguinte código:
         //    imoveis.add(imovel);
+        final boolean valorDentroDosLimites = imovel.getValor() >= VALOR_MINIMO && imovel.getValor() <= VALOR_MAXIMO;
+
+        if(valorDentroDosLimites){
+            imoveis.add(imovel);
+        } else {
+            System.out.println("Valor fora dos limites permitidos");
+        }
     }
 
     /**
@@ -35,6 +47,9 @@ public class ImoveisParaFinanciamento {
 
             // se "imovel" corresponder às regras, adicioná-lo à lista de opcoes com o seguinte código:
             //    opcoes.add(imovel);
+            if(imovel.getValor() <= valorLimite){
+                opcoes.add(imovel);
+            }
         }
 
         return opcoes;
