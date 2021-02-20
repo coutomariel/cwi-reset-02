@@ -17,4 +17,8 @@ public class Diretor extends Pessoa{
         this.quantidadeFilmesDirigidos = quantidadeFilmesDirigidos;
     }
 
+    @Override
+    public void imprimirCredito() {
+        System.out.println("Ator: " + super.getNome() + ", " + this.quantidadeFilmesDirigidos + "filmes dirigidos");
+    }
 }

@@ -17,6 +17,11 @@ public class Pessoa {
         System.out.println("Nome: " + this.genero.getDescricao() + "\n");
     }
 
+    public void imprimirCredito(){
+        System.out.println(this.getNome());
+    }
+
+
     public String getNome() {
         return nome;
     }

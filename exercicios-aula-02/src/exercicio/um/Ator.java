@@ -9,6 +9,11 @@ public class Ator extends Pessoa{
         this.numeroOscars = numeroOscars;
     }
 
+    @Override
+    public void imprimirCredito() {
+        System.out.println("Ator: " + super.getNome() + ", " + this.getNumeroOscars() + "oscars");
+    }
+
     public Integer getNumeroOscars() {
         return numeroOscars;
     }
@@ -16,5 +21,7 @@ public class Ator extends Pessoa{
     public void setNumeroOscars(Integer numeroOscars) {
         this.numeroOscars = numeroOscars;
     }
+
+
 
 }
