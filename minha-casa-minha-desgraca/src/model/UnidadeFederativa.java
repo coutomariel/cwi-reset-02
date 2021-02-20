@@ -2,37 +2,41 @@ package model;
 
 public enum UnidadeFederativa {
 
-    AMAZONAS("Amazonas", "AM", 0.5),
-    ALAGOAS("Alagoas", "AL", 0.5),
-    ACRE("Acre", "AC", 0.5),
-    AMAPA("Amapá", "AP", 0.5),
-    BAHIA("Bahia", "BA", 0.5),
-    PARA("Pará", "PA", 0.5),
-    MATO_GROSSO("Mato Grosso", "MT", 0.5),
-    MINAS_GERAIS("Minas Gerais", "MG", 0.5),
-    MATO_GROSSO_DO_SUL("Mato Grosso do Sul", "MS", 0.5),
-    GOIAS("Goiás", "GO", 0.5),
-    MARANHAO("Maranhão", "MA", 0.5),
-    RIO_GRANDE_DO_SUL("Rio Grande do Sul", "RS", 0.5),
-    TOCANTINS("Tocantins", "TO", 0.5),
-    PIAUI("Piauí", "PI", 0.5),
+    AMAZONAS("Amazonas", "AM"),
+    ALAGOAS("Alagoas", "AL"),
+    ACRE("Acre", "AC"),
+    AMAPA("Amapá", "AP"),
+    BAHIA("Bahia", "BA"),
+    PARA("Pará", "PA"),
+    MATO_GROSSO("Mato Grosso", "MT"),
+    MINAS_GERAIS("Minas Gerais", "MG"),
+    MATO_GROSSO_DO_SUL("Mato Grosso do Sul", "MS"),
+    GOIAS("Goiás", "GO"),
+    MARANHAO("Maranhão", "MA"),
+    RIO_GRANDE_DO_SUL("Rio Grande do Sul", "RS"),
+    TOCANTINS("Tocantins", "TO"),
+    PIAUI("Piauí", "PI"),
     SAO_PAULO("São Paulo", "SP", 0.65),
-    RONDONIA("Rondônia", "RO", 0.5),
-    RORAIMA("Roraima", "RR", 0.5),
-    PARANA("Paraná", "PR", 0.5),
-    CEARA("Ceará", "CE", 0.5),
-    PERNAMBUCO("Pernambuco", "PE", 0.5),
-    SANTA_CATARINA("Santa Catarina", "SC", 0.5),
-    PARAIBA("Paraíba", "PB", 0.5),
-    RIO_GRANDE_DO_NORTE("Rio Grande do Norte", "RN", 0.5),
-    ESPIRITO_SANTO("Espírito Santo", "ES", 0.5),
+    RONDONIA("Rondônia", "RO"),
+    RORAIMA("Roraima", "RR"),
+    PARANA("Paraná", "PR"),
+    CEARA("Ceará", "CE"),
+    PERNAMBUCO("Pernambuco", "PE"),
+    SANTA_CATARINA("Santa Catarina", "SC"),
+    PARAIBA("Paraíba", "PB"),
+    RIO_GRANDE_DO_NORTE("Rio Grande do Norte", "RN"),
+    ESPIRITO_SANTO("Espírito Santo", "ES"),
     RIO_DE_JANEIRO("Rio de Janeiro", "RJ", 0.6),
-    SERGIPE("Sergipe", "SE", 0.5),
-    DISTRITO_FEDERAL("Distrito Federal", "DF", 0.5);
+    SERGIPE("Sergipe", "SE"),
+    DISTRITO_FEDERAL("Distrito Federal", "DF");
 
     private String nome;
     private String sigla;
     private Double fator;
+
+    UnidadeFederativa(String nome, String sigla) {
+        this(nome, sigla, 0.5);
+    }
 
     UnidadeFederativa(String nome, String sigla, Double fator) {
         this.nome = nome;
