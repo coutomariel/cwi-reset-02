@@ -11,7 +11,6 @@ import java.time.LocalDate;
  *   A gestão do saldo da conta e das transações, além das taxas, é responsabilidade de cada implementação.
  */
 public interface ContaBancaria {
-
     /**
      * Retorna a instituição bancária à qual a conta pertence.
      *
