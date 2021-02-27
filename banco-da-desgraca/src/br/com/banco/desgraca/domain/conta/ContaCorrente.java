@@ -25,13 +25,12 @@ public class ContaCorrente extends Conta {
     public void transferir(Double valor, ContaBancaria contaDestino) {
         boolean transferenciaParaOutraInstituicao = !contaDestino.getInstituicaoBancaria().equals(this.getInstituicaoBancaria());
         double tarifa = 0.0;
+
+        super.transferir(valor, contaDestino);
         if(transferenciaParaOutraInstituicao){
             tarifa = valor * TARIFA_TRANSFERENCIA_OUTRA_INSTITUICAO;
             super.debitarTarifa(tarifa);
         }
-
-        super.transferir(valor, contaDestino);
-
     }
 
     @Override
