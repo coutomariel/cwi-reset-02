@@ -2,7 +2,9 @@ package br.com.cwi.resetflix.repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
+import br.com.cwi.resetflix.exception.NotFoundException;
 import org.springframework.stereotype.Repository;
 
 import br.com.cwi.resetflix.entity.AtorEntity;
@@ -37,5 +39,10 @@ public class AtoresRepository {
         }
 
         return null;
+    }
+
+   public boolean atorExistsWithId(Long id){
+        List<Long> listIds =  atores.stream().map(entity -> entity.getId()).collect(Collectors.toList());
+        return listIds.contains(id);
     }
 }

@@ -1,10 +1,12 @@
 package br.com.cwi.resetflix.repository;
 
 import br.com.cwi.resetflix.entity.DiretorEntity;
+import br.com.cwi.resetflix.exception.NotFoundException;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Repository
 public class DiretoresRepository {
@@ -29,6 +31,11 @@ public class DiretoresRepository {
                 return diretor;
             }
         }
-        return null;
+        throw new NotFoundException("Não foi encontrado Diretor com ID " + id);
+    }
+
+    public boolean diretorExistsWithId(Long id){
+        List<Long> listIds =  diretores.stream().map(entity -> entity.getId()).collect(Collectors.toList());
+        return listIds.contains(id);
     }
 }
